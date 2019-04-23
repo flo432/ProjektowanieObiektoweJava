@@ -1,0 +1,8 @@
+{
+  "type": "mongo",
+  "name": "mydb",
+  "url": "localhost",
+  "port": 27017,
+  "user": "",
+  "pswd": ""
+}

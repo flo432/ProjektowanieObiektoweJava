@@ -1,0 +1,8 @@
+/home,RootHandler
+/about,RootHandler
+/contact,RootHandler
+/article/:title,RootHandler
+/api/article/:title,JSONHandler
+/api/home,JSONHandler
+/api/about,JSONHandler
+/api/contact,JSONHandler

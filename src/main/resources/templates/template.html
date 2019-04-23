@@ -1,0 +1,23 @@
+<{{doctype}}>
+<html>
+	<head>
+		<meta charset="{{charset}}" />
+		<title>{{title}}</title>
+		<link rel="shortcut icon" type="image/png" href="http://www.ehas.org/wp-content/uploads/2012/02/favicon.ico-150x150.png"/>
+		{{style}}
+	</head>
+	<body>
+		<ul class="navigation">
+			<li class="nav-item"><a href="{{nav-home}}">Home</a></li>
+			<li class="nav-item"><a href="{{nav-about}}">About</a></li>
+			<li class="nav-item"><a href="{{nav-contact}}">Contact</a></li>
+		</ul>
+
+		<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+		<label for="nav-trigger"></label>
+
+		<div class="site-wrap">
+			@content@
+		</div>
+	</body>
+</html>

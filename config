@@ -1,0 +1,42 @@
+{
+  "type": "sqlite",
+  "name": "sqldb.sqlite",
+  "url": "/home/asdflo/UJ/PO-master/Zadania/",
+  "port": 1234,
+  "user": "",
+  "pswd": ""
+}
+
+sudo systemctl start postgresql
+psql -d myDatabaseName
+
+{
+  "type": "postgresql",
+  "name": "myDatabaseName",
+  "url": "//localhost",
+  "port": 5432,
+  "user": "asdflo",
+  "pswd": "qweasd"
+}
+
+{
+  "type": "mongo",
+  "name": "mydb",
+  "url": "localhost",
+  "port": 27017,
+  "user": "",
+  "pswd": ""
+}
+
+### GET PAGE
+curl -i -X GET -H "Content-type: application/json" -H "Accept: application/json"  "http://localhost:9001/api/contact"
+
+### POST ARTICLE
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Morbi non molestie libero","description":"Morbi non molestie libero. Morbi et bibendum felis. Praesent suscipit turpis eu.", "paragraph": "Mauris tincidunt est ut dolor aliquet, eu consectetur velit lobortis. Morbi pretium eu ipsum at scelerisque. Praesent vehicula ex quam, non iaculis lacus tincidunt a. Aliquam a varius odio. Cras ac elit tellus. Etiam placerat volutpat orci in imperdiet. Morbi eget lacus purus. Morbi tristique gravida consequat. Morbi ornare id libero nec porttitor. Donec eu leo a sem tempor efficitur id eget tellus. Nam condimentum porta ultricies.\n\nDonec at nunc ullamcorper, rutrum lectus eu, porttitor enim. Phasellus vitae efficitur ante. In a leo euismod, interdum ipsum eget, hendrerit dui. Nunc faucibus rutrum arcu mollis tempus. Quisque ullamcorper nibh eget interdum feugiat. Nam rhoncus vitae dui facilisis suscipit. Cras sit amet posuere nisl. Suspendisse a velit ac est consectetur laoreet ac convallis massa.\n\nDonec quis mattis odio, ac posuere lectus. Quisque convallis accumsan dolor, et viverra dui mollis quis. Cras nibh eros, vehicula eget orci sit amet, cursus sagittis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eleifend nulla et libero sodales dignissim. Nullam non dui rutrum, efficitur dolor a, malesuada odio. Cras sodales malesuada risus, sit amet lobortis est aliquet in. Phasellus non venenatis mauris. Morbi purus nisi, consequat at mauris non, sollicitudin convallis dui. Vivamus egestas pellentesque mi, ut porta augue laoreet eu. Donec feugiat commodo nunc, a hendrerit lectus pretium quis. Quisque a nibh quis felis consequat lacinia sed a purus. Cras gravida, felis facilisis tempor ultrices, turpis ipsum consequat nulla, a mollis libero odio a erat. Mauris gravida leo velit, eget iaculis ipsum congue at. Proin scelerisque nisl augue. Proin sit amet iaculis mauris.", "thumbinail":"http://wstaw.org/m/2018/02/06/12.jpg", "image":"http://wstaw.org/m/2018/02/06/12_1.jpg", "url": "morbi-non-molestie-libero"}' "http://localhost:9001/api/home"
+
+### PUT DATA
+curl -H 'Content-Type: application/json' -X PUT -d '{"phone" : "123 456 789"}' "http://localhost:9001/api/contact"
+
+### DELETE ARTICLE
+curl -i -X DELETE http://localhost:9001/api/article/morbi-non-molestie-libero
+
